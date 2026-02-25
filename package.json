@@ -1,11 +1,14 @@
 {
+  "homepage": "https://Akramyoonos.github.io/Rehan-Grero",
   "name": "land-broker",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
-    "start": "next start -p 3000"
+    "start": "next start -p 3000",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "clsx": "^2.1.1",
