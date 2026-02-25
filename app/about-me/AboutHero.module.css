@@ -1,0 +1,179 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Align content to the bottom */
+    padding: 18rem 8rem 10rem;
+    /* Further increased top padding */
+    position: relative;
+    overflow: hidden;
+    background-color: #0d121f;
+}
+
+.backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/uploads/about me banner.jpeg') no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Subtle radial shadow behind the text for legibility */
+    background: linear-gradient(to right,
+            rgba(10, 17, 33, 0.95) 0%,
+            rgba(10, 17, 33, 0.7) 40%,
+            transparent 100%);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+}
+
+.backLink:hover {
+    transform: translateX(-5px);
+    color: #ffffff;
+}
+
+.label {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.name {
+    font-family: var(--font-serif);
+    font-size: 5rem;
+    /* Matched to image scale */
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.4rem;
+    /* Reduced from 1.8rem */
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+}
+
+.description {
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ffffff;
+    /* Updated to white */
+    max-width: 650px;
+    margin-bottom: 2rem;
+    /* Reduced from 4rem */
+}
+
+.actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btnPrimary {
+    background: var(--primary);
+    color: #000000;
+    padding: 1.2rem 2.5rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btnPrimary:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btnSecondary {
+    background: transparent;
+    color: #ffffff;
+    padding: 1.2rem 2.5rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btnSecondary:hover {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        padding: 8rem 3rem;
+    }
+
+    .name {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 1.5rem;
+        min-height: auto;
+    }
+
+    .name {
+        font-size: 3rem;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .btnPrimary,
+    .btnSecondary {
+        width: 100%;
+        text-align: center;
+    }
+}

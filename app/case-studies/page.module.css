@@ -1,0 +1,218 @@
+.mainContainer {
+    min-height: 100vh;
+    background: radial-gradient(circle at top right, var(--secondary), var(--background));
+    padding-top: 120px;
+    padding-bottom: 2rem;
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.backLink:hover {
+    color: var(--primary);
+}
+
+.heroContent {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.titleArea {
+    background: rgba(17, 25, 40, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainTitle {
+    font-size: 3.2rem;
+    font-family: var(--font-serif);
+    margin-bottom: 1rem;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #94a3b8;
+    max-width: 650px;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.btnGroup {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.ctaBtn {
+    background: rgba(201, 165, 99, 0.1);
+    border: 1px solid rgba(201, 165, 99, 0.3);
+    color: #ffffff;
+    padding: 0.9rem 2.2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.ctaBtn:hover {
+    background: var(--primary);
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.outlineBtn {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 0.9rem 2.2rem;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.outlineBtn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.confidentialityNote {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+/* Sidebar Elements */
+.sidebar {
+    background: rgba(17, 25, 40, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sidebarTitle {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #94a3b8;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.75rem;
+}
+
+.tagCloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.sidebarTag {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #cbd5e1;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+}
+
+.sidebarTag:hover {
+    background: rgba(201, 165, 99, 0.15);
+    border-color: rgba(201, 165, 99, 0.3);
+    color: var(--primary);
+}
+
+.outcomeBox {
+    background: rgba(15, 24, 43, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.outcomeTitle {
+    font-size: 0.9rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.outcomeText {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+/* Engagements Section */
+.sectionLabel {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #64748b;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1rem;
+}
+
+.footerCta {
+    background: rgba(17, 25, 40, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.footerTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    color: #ffffff;
+}
+
+.footerText {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin-bottom: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+    .heroContent {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainTitle {
+        font-size: 2.5rem;
+    }
+
+    .footerTitle {
+        font-size: 1.75rem;
+    }
+}

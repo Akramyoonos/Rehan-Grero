@@ -1,0 +1,201 @@
+.section {
+    padding: 8rem 4rem;
+    background: linear-gradient(180deg, #10192e 0%, #0A1121 100%);
+    /* Signature Midnight Navy Gradient */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.label {
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.title {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.titleHighlight {
+    color: var(--primary);
+    font-style: italic;
+}
+
+.subtitle {
+    color: #94a3b8;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.card {
+    background-color: #111a2d;
+    /* Lighter Slate Blue elevation */
+    padding: 3rem 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 2px;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover {
+    border-color: var(--primary);
+    transform: translateY(-8px);
+}
+
+.iconWrapper {
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+.cardTitle {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cardDescription {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.roleType {
+    font-size: 0.65rem;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 0.3rem 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.cardLink {
+    color: var(--primary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.viewAllLink {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.viewAllLink:hover {
+    border-bottom-color: var(--primary);
+    opacity: 0.8;
+}
+
+@media (max-width: 1200px) {
+    .grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section {
+        padding: 6rem 2rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 4rem 1.5rem;
+    }
+
+    .header {
+        margin-bottom: 3.5rem;
+    }
+
+    .title {
+        font-size: 2.22rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .card {
+        padding: 3rem 2rem;
+    }
+
+    .viewAllLink {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        text-align: left;
+    }
+
+    .subtitle {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .viewAllLink {
+        width: 100%;
+        text-align: center;
+        border: 1px solid var(--primary);
+        padding: 0.8rem;
+        margin-top: 2rem;
+    }
+}

@@ -1,0 +1,452 @@
+.hero {
+    height: 90vh;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10rem 6rem 4rem;
+    background-color: #0f182b;
+    position: relative;
+    overflow: hidden;
+    scroll-margin-top: 100px;
+}
+
+/* Background Slider */
+.backgroundSlider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    filter: brightness(1.15);
+    /* Increased brightness */
+    transition: opacity 1.5s ease-in-out;
+}
+
+.backgroundImage.active {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,
+            rgba(10, 17, 33, 0.95) 0%,
+            rgba(10, 17, 33, 0.7) 30%,
+            rgba(10, 17, 33, 0.3) 100%);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+}
+
+.subtitle {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    /* High spacing as seen in image */
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: 3.2rem;
+    /* Reduced from 3.8rem */
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 0px;
+    color: #ffffff;
+    letter-spacing: -1px;
+}
+
+.highlight {
+    font-family: var(--font-serif);
+    font-size: 3.2rem;
+    /* Reduced from 3.8rem */
+    line-height: 1.1;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 3rem;
+    letter-spacing: -0.5px;
+}
+
+.description {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    max-width: 750px;
+    color: rgba(255, 255, 255, 0.9);
+    /* Slightly brighter but transparent */
+    margin-bottom: 4rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.actions {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btnPrimary {
+    padding: 1rem 2.5rem;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    background: transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btnPrimary:hover {
+    background: var(--primary);
+    color: #000;
+}
+
+.btnSecondary {
+    padding: 1rem 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Ghost/Glassy feel */
+    color: #cbd5e1;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.btnSecondary:hover {
+    border-color: #ffffff;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.trusted {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #64748b;
+    font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+
+    .title,
+    .highlight {
+        font-size: 3.8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        padding: 8rem 3rem 6rem;
+        /* Added bottom padding for spacing */
+        min-height: auto;
+    }
+
+    .title,
+    .highlight {
+        font-size: 3.2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 7rem 1.5rem 8rem;
+        /* Increased bottom padding for dots */
+        justify-content: center;
+        height: 100vh;
+        min-height: 650px;
+        /* Full height on mobile */
+    }
+
+    .title,
+    .highlight {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .highlight {
+        margin-bottom: 1.5rem;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .btnPrimary,
+    .btnSecondary {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .description {
+        margin-bottom: 2.5rem;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 10rem;
+    }
+
+    .title,
+    .highlight {
+        font-size: 2rem;
+    }
+
+    .btnPrimary,
+    .btnSecondary {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* 📱 Dedicated Fix for iPhone SE & Small Screens (375px and below) */
+@media (max-width: 375px) {
+    .hero {
+        padding: 8rem 1.5rem 6.5rem;
+        /* Increased top padding to clear navbar */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        min-height: 560px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .title,
+    .highlight {
+        font-size: 1.7rem;
+        /* Smaller size for longer titles (Slide 2) */
+        line-height: 1.25;
+        text-align: center;
+        width: 100%;
+    }
+
+    .subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .highlight {
+        margin-bottom: 1.5rem;
+        font-style: italic;
+    }
+
+    .description {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+        gap: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btnPrimary,
+    .btnSecondary {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        font-size: 0.65rem;
+        justify-content: center;
+    }
+
+    .trusted {
+        font-size: 0.6rem;
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+
+    .navigationDots {
+        bottom: 2rem;
+        gap: 1.2rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animateFadeIn {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animateTitleMain {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.animateTitleHighlight {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+.animateDescription {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.6s forwards;
+}
+
+.animateActions {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.8s forwards;
+}
+
+.animateTrusted {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 1s forwards;
+}
+
+/* Navigation Dots */
+.navigationDots {
+    position: absolute;
+    right: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    outline: none;
+}
+
+.dotType {
+    color: transparent;
+}
+
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.2);
+}
+
+.activeDot {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transform: scale(1.2);
+}
+
+.activeDot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigationDots {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        bottom: 3rem;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+}

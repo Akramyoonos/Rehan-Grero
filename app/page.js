@@ -1,66 +1,43 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Hero from '@/components/Hero';
+import CoreCompetencies from '@/components/CoreCompetencies';
+import Services from '@/components/Services';
+import PropertyTypes from '@/components/PropertyTypes';
+import BuyerRepresentation from '@/components/BuyerRepresentation';
+import Protocol from '@/components/Protocol';
+import Insights from '@/components/Insights';
+import Careers from '@/components/Careers';
+import Testimonials from '@/components/Testimonials';
+import Advisor from '@/components/Advisor';
+import FinalCTA from '@/components/FinalCTA';
+
+export const metadata = {
+  title: 'Rehan Grero | Strategic Property Advisor & Buyer’s Representative',
+  description: 'Exclusively representing buyers in Sri Lanka. Independent property analysis, due diligence, and strategic negotiation for residential and commercial acquisitions.',
+  openGraph: {
+    title: 'Rehan Grero | Strategic Property Advisor & Buyer’s Representative',
+    description: 'Exclusively representing buyers in Sri Lanka. Independent property analysis, due diligence, and strategic negotiation for residential and commercial acquisitions.',
+    images: [{ url: '/RJ Grero.jpeg', width: 1200, height: 630, alt: 'Rehan Grero Advisory' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/RJ Grero.jpeg'],
+  },
+};
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main>
+      <Hero />
+      <CoreCompetencies />
+      <Services />
+      <PropertyTypes />
+      <BuyerRepresentation />
+      <Protocol />
+      <Insights />
+      <Careers />
+      <Testimonials />
+      <Advisor />
+      <FinalCTA />
+    </main>
   );
 }

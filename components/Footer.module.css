@@ -1,0 +1,163 @@
+.footer {
+    padding: 8rem 2rem 4rem;
+    background-color: #0A1121;
+    /* Signature Midnight Navy */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ctaSection {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.ctaTitle {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    width: 100%;
+    margin-bottom: 8rem;
+}
+
+.card {
+    background-color: #111a2d;
+    /* Lighter Slate Blue for depth */
+    padding: 1.8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    /* Gold Border */
+}
+
+.icon {
+    color: var(--primary);
+    /* Gold */
+    margin-bottom: 1.2rem;
+}
+
+.cardLabel {
+    color: #94a3b8;
+    /* Soft Grey for secondary text */
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    font-family: var(--font-sans);
+}
+
+.cardTitle {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: var(--font-sans);
+}
+
+.bottomBar {
+    text-align: center;
+    color: #64748b;
+    /* Improved visibility - Slate Blue-Grey */
+    font-size: 0.7rem;
+    /* Slightly larger */
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    line-height: 2.2;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.footerBrand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.footerLogo {
+    height: 36px;
+    /* Increased size */
+    width: auto;
+    filter: brightness(0.9);
+}
+
+.copyright {
+    display: block;
+    opacity: 0.9;
+}
+
+.disclaimer {
+    display: block;
+    font-size: 0.6rem;
+    opacity: 0.6;
+    /* Balanced subtlety */
+    margin-bottom: 1.5rem;
+}
+
+.adminLink {
+    font-size: 0.5rem;
+    color: #334155;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.adminLink:hover {
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .ctaTitle {
+        font-size: 2.5rem;
+    }
+}
+
+.socialSection {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.socialIcon {
+    color: #475569;
+    /* Muted Slate Grey */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialIcon:hover {
+    color: var(--primary);
+    transform: translateY(-3px);
+}

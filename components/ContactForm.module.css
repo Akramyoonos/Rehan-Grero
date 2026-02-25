@@ -1,0 +1,125 @@
+.formContainer {
+    width: 100%;
+}
+
+.formTitle {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    /* Smaller title */
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    /* Further reduced */
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    /* Even tighter gap */
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    /* Tighter internal gap */
+}
+
+.inputGroup label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--font-sans);
+}
+
+.inputGroup input,
+.inputGroup textarea {
+    background: rgba(255, 255, 255, 0.03);
+    /* Translucent background */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.6rem 0.8rem;
+    /* Even smaller padding */
+    border-radius: 4px;
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    /* Smaller font */
+    transition: all 0.3s ease;
+}
+
+.inputGroup input::placeholder,
+.inputGroup textarea::placeholder {
+    color: #475569;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.05);
+    /* Transparent on focus too */
+}
+
+.submitBtn {
+    background: var(--primary);
+    color: #000;
+    padding: 1rem;
+    /* Reduced from 1.25rem */
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    /* Reduced from 1rem */
+    transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.errorMessage {
+    color: #ef4444;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.successCard {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.successCard h2 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin: 1.5rem 0 1rem;
+    color: #ffffff;
+}
+
+.successCard p {
+    color: #94a3b8;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}

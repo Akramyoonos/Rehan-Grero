@@ -1,0 +1,240 @@
+.section {
+    padding: 4rem 4rem;
+    background: linear-gradient(180deg, #10192e 0%, #0A1121 100%);
+    /* Signature Midnight Navy Gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    /* Optional separator */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.5fr;
+    gap: 4rem;
+    max-width: 1400px;
+    align-items: stretch;
+}
+
+/* Image Styling */
+.imageWrapper {
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cornerAccent {
+    position: absolute;
+    bottom: -1.5rem;
+    left: -1.5rem;
+    /* Repositioned to bottom-left as per image */
+    width: 100px;
+    height: 100px;
+    border-left: 1px solid var(--primary);
+    /* Left border */
+    border-bottom: 1px solid var(--primary);
+    z-index: 0;
+}
+
+/* Content Styling */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.label {
+    color: var(--primary);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-sans);
+}
+
+.name {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.underscore {
+    width: 60px;
+    height: 2px;
+    background-color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.text {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    max-width: 100%;
+}
+
+.signatureBlock {
+    margin-top: 1rem;
+    border-left: 2px solid var(--primary);
+    padding-left: 1rem;
+}
+
+.sigName {
+    display: block;
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.3rem;
+}
+
+.sigRole {
+    display: block;
+    color: #94a3b8;
+    /* Soft Grey to match body text */
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bioLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.bioLink:hover {
+    border-bottom-color: var(--primary);
+    gap: 0.75rem;
+}
+
+@media (max-width: 1024px) {
+    .section {
+        padding: 6rem 3rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        text-align: left;
+    }
+
+    .imageWrapper {
+        max-width: 500px;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .content {
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .name {
+        font-size: 3rem;
+    }
+
+    .videoContainer {
+        margin-top: 3rem;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 4rem 1.5rem;
+    }
+
+    .container {
+        gap: 3rem;
+    }
+
+    .name {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+
+    .text {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+    }
+
+    .cornerAccent {
+        width: 60px;
+        height: 60px;
+        bottom: -1rem;
+        left: -1rem;
+    }
+
+    .underscore {
+        margin-bottom: 2rem;
+    }
+
+    .videoContainer {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 2rem;
+    }
+
+    .imageWrapper {
+        max-width: 100%;
+    }
+
+    .sigName {
+        font-size: 0.7rem;
+    }
+
+    .section {
+        padding: 3rem 1rem;
+    }
+}
+
+.videoContainer {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.videoFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,314 @@
+.section {
+    padding: 6rem 4rem;
+    background: linear-gradient(180deg, #10192e 0%, #0A1121 100%);
+    /* Signature Midnight Navy Gradient */
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.label {
+    color: var(--primary);
+    /* Gold */
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin-bottom: 1.5rem;
+    display: block;
+    font-family: var(--font-sans);
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.headerFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.detailLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.detailLink:hover {
+    border-bottom-color: var(--primary);
+    gap: 12px;
+}
+
+/* Top Grid - 3 Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1280px;
+    margin: 0 auto 2rem auto;
+}
+
+.card {
+    background-color: #111a2d;
+    /* Lighter Navy/Blue-Grey for contrast */
+    padding: 3rem 2.5rem;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.card:hover {
+    border-color: var(--primary);
+    /* Solid Gold Border */
+    transform: translateY(-8px);
+}
+
+.icon {
+    color: var(--primary);
+    opacity: 0.9;
+}
+
+.cardTitle {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.checkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checkItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.checkIcon {
+    color: var(--primary);
+    min-width: 14px;
+    margin-top: 4px;
+}
+
+/* Bottom Grid - 2 Panels */
+.bottomGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.panel {
+    background-color: #111a2d;
+    /* Matching Card Blue */
+    padding: 3rem 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 2px;
+    transition: all 0.4s ease;
+    /* Added for consistency */
+}
+
+.panel:hover {
+    border-color: var(--primary);
+    /* Gold Border */
+    transform: translateY(-8px);
+    /* Lift animation */
+}
+
+.panelTitle {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: var(--font-sans);
+}
+
+.panelText {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 1rem;
+}
+
+.btnOutline {
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btnOutline:hover {
+    background: var(--primary);
+    color: #000;
+}
+
+.btnText {
+    padding: 0.8rem 1.5rem;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border: 1px solid #1f2937;
+}
+
+.btnText:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.whatYouGetGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.benefitItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+.benefitIcon {
+    color: var(--primary);
+}
+
+@media (max-width: 1200px) {
+    .grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section {
+        padding: 6rem 2rem;
+    }
+
+    .grid,
+    .bottomGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .header {
+        margin-bottom: 3rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 4rem 1.5rem;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .card,
+    .panel {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .whatYouGetGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .cardNumber {
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .btnOutline {
+        width: 100%;
+        text-align: center;
+    }
+
+    .headerFlex {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .header {
+        text-align: left;
+        margin-left: 0;
+    }
+}
